@@ -53,8 +53,8 @@ export default function Header({ className }) {
          )}>
          <div className="wrapper flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" aria-label="Homepage">
-               <Image className="w-[3rem]"
+            <Link href="/" className='me-9' aria-label="Homepage">
+               <Image className="w-[9rem] md:w-[10.5rem]"
                   src={siteLogo}
                   alt="TohfaFolio"
                   priority={true}
