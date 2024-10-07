@@ -1,0 +1,8 @@
+{
+   "editor.wordWrap": "wordWrapColumn",
+   //  Enable autocompletion inside cva
+   "tailwindCSS.experimental.classRegex": [
+      ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+      ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+   ]
+}
