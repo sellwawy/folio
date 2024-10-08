@@ -1,10 +1,10 @@
-import { cn } from '@/utils'
+import { cn } from './../../utils'
 
 function SectionHeading({ children, className }) {
    return (
       <h2
          className={cn(
-            'text-primary pb-spacing-11 text-center text-3xl font-semibold uppercase tracking-widest',
+            'pb-spacing-11 text-center text-3xl font-semibold uppercase tracking-widest text-primary',
             className,
          )}>
          {children}

@@ -1,9 +1,9 @@
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Skills from '@/components/Skills'
-import Work from '@/components/Work'
-import Contact from '@/components/Contact'
-import Experience from '@/components/Experience'
+import Hero from '../components/Hero'
+import About from '../components/About'
+import Skills from '../components/Skills'
+import Work from '../components/Work'
+import Contact from '../components/Contact'
+import Experience from '../components/Experience'
 
 async function HomePage() {
    return (

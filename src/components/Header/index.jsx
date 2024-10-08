@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { cn } from '@/utils'
+import { cn } from '../../utils'
 import Navbar from './Navbar'
 import siteLogo from '../../../public/images/site-logo.svg'
 
@@ -12,7 +12,7 @@ export default function Header({ className }) {
    const [lastScrollY, setLastScrollY] = useState(0)
    const [isZeroScroll, setIsZeroScroll] = useState(true)
 
-   useEffect(() => { 
+   useEffect(() => {
       const controlNavbar = () => {
          // If scroll down hide the navbar
          if (window.scrollY > lastScrollY && window.scrollY > 500) {
@@ -43,7 +43,7 @@ export default function Header({ className }) {
       // Header
       <header
          className={cn(
-            'bg-quinary sticky top-0 z-50 flex h-[3.75rem] items-center justify-center overflow-hidden transition-transform',
+            'sticky top-0 z-50 flex h-[3.75rem] items-center justify-center overflow-hidden bg-quinary transition-transform',
             className,
             {
                '-translate-y-full': hide,
@@ -53,18 +53,17 @@ export default function Header({ className }) {
          )}>
          <div className="wrapper flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className='me-9' aria-label="Homepage">
-               <Image className="w-[9rem] md:w-[10.5rem]"
+            <Link href="/" className="me-9" aria-label="Homepage">
+               <Image
+                  className="w-[9rem] md:w-[10.5rem]"
                   src={siteLogo}
                   alt="TohfaFolio"
                   priority={true}
                   quality={100}
                />
             </Link>
-            <div className="sm-up:gap-x-8 flex items-center gap-x-2">
-               {/* Navbar */}
-               <Navbar />
-            </div>
+            {/* Navbar */}
+            <Navbar />
          </div>
       </header>
    )

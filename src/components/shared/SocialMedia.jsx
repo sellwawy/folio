@@ -1,4 +1,4 @@
-import { SocialMediaIcons } from '@/constants/SocialMediaIcons'
+import { SocialMediaIcons } from '../../constants/SocialMediaIcons'
 import React from 'react'
 
 function SocialMedia() {

@@ -1,13 +1,8 @@
 import Image from 'next/image'
-import React from 'react'
-import { FaEye, FaGithub } from 'react-icons/fa6'
-import { SiNextdotjs } from 'react-icons/si'
-import { FaWordpress } from 'react-icons/fa'
-import { IoLogoVercel } from 'react-icons/io5'
 import Link from 'next/link'
-import { cn } from '@/utils'
+import { cn } from '../../utils'
 
-function Card({
+function WorkCard({
    projectName,
    details,
    imageSrc,
@@ -18,7 +13,7 @@ function Card({
    return (
       <div
          className={cn(
-            'bg-quinary flex max-w-fit flex-col rounded-lg border border-gray-200 shadow-custom max-md:max-w-96',
+            'flex max-w-fit flex-col rounded-lg border border-gray-200 bg-quinary shadow-custom max-md:max-w-96',
             className,
          )}>
          <div>
@@ -55,4 +50,4 @@ function Card({
    )
 }
 
-export default Card
+export default WorkCard

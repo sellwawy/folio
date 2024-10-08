@@ -1,11 +1,11 @@
 import React from 'react'
 import SectionHeading from './ui/SectionHeading'
-import Card from './ui/Card'
-import { workData } from '@/constants/workData'
+import WorkCard from './ui/WorkCard'
+import { workData } from '../constants/workData'
 
 function Work() {
    const workCards = workData.map((item, index) => (
-      <Card
+      <WorkCard
          className="justify-self-center"
          key={index}
          imageSrc={item.imageSrc}

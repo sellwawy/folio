@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import { cn } from '@/utils'
+import { cn } from '../../utils'
 
 const buttonVariants = cva(
    'flex w-fit items-center justify-center font-medium duration-300',

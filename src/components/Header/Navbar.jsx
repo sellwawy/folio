@@ -1,6 +1,6 @@
 'use client'
 
-import { navLinksData } from '@/constants/navLinksData'
+import { navLinksData } from '../../constants/navLinksData'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
@@ -9,7 +9,7 @@ const navItems = navLinksData.map((item, index) => (
    <li key={index}>
       <Link
          href={item.route}
-         className="hover:border-primary py-1 hover:border-b-2">
+         className="py-1 hover:border-b-2 hover:border-primary">
          {item.label}
       </Link>
    </li>
@@ -29,7 +29,7 @@ function Navbar() {
             onClick={handleClick}
             aria-controls="main-navigation"
             aria-expanded={isTure}
-            className="text-t z-50 sm:hidden">
+            className="text-t a absolute end-9 z-50 sm:hidden">
             {isTure ? (
                <FaXmark className="text-slate-900" size={19} />
             ) : (
@@ -38,11 +38,11 @@ function Navbar() {
             <span className="sr-only">Menu</span>
          </button>
          {/* Navbar */}
-         <nav className="text-primary pt-1 font-semibold" aria-label="Main">
+         <nav className="pt-1 font-semibold text-primary" aria-label="Main">
             <ul
                id="main-navigation"
                data-visible={isTure}
-               className="max-sm:bg-quinary flex items-center gap-x-8 transition duration-300 ease-out max-sm:fixed max-sm:inset-y-0 max-sm:end-0 max-sm:start-1/4 max-sm:translate-x-full max-sm:flex-col max-sm:gap-y-5 max-sm:pt-16 max-sm:data-[visible=true]:translate-x-0 max-sm:data-[visible=true]:shadow-custom">
+               className="flex items-center gap-x-8 transition duration-300 ease-out max-sm:fixed max-sm:inset-y-0 max-sm:end-0 max-sm:start-1/4 max-sm:translate-x-full max-sm:flex-col max-sm:gap-y-5 max-sm:bg-quinary max-sm:pt-16 max-sm:data-[visible=true]:translate-x-0 max-sm:data-[visible=true]:shadow-custom">
                {/* Nav items */}
                {navItems}
             </ul>
