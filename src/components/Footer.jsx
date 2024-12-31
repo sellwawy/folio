@@ -9,7 +9,7 @@ export default function Footer() {
                <SocialMedia />
                {/* Footer copy content */}
                <div className="text-center font-medium">
-                  &copy; 2024 Tohfa Blog. All Rights Reserved.
+                  &copy; 2024 Folio. All Rights Reserved.
                </div>
             </div>
          </footer>
